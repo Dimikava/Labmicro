@@ -1,0 +1,2 @@
+[console_scripts]
+mmcore = pymmcore_plus._cli:main

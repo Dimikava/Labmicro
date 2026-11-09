@@ -1,0 +1,13 @@
+Zeiss Headless Controller v7.0.0
+Offline validation environment: container Python, simulated Micro-Manager Java Core.
+Python 3.8 grammar validation: PASS for all packaged Python source files.
+Runtime unit tests: 59 passed, 0 failed.
+Coverage includes: v5 legacy stage/home/sequence regression tests, v6.1 path tests,
+manual camera snap, v7 named homes, X/Y/Z step-and-endpoint inclusive planner,
+reverse scan and serpentine ordering, multiple regions, multiple channels,
+timepoints, repeated frames, image saving, TIFF/OME-TIFF (if dependency installed),
+CRC-equivalent SHA256 integrity detection, and interrupted run recovery.
+
+Physical microscope validation: NOT PERFORMED BY ASSISTANT.
+The user's previously confirmed Zeiss stage and PixeLINK single snaps are the hardware
+foundation, but v7 whole-experiment scanning must still be tested on the real system.

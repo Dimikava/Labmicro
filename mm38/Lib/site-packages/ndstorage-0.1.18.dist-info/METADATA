@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: ndstorage
+Version: 0.1.18
+Summary: N-dimensional, multiresolution file format for Micro-Manager
+Author-email: Henry Pinkard <henry.pinkard.open.source@gmail.com>
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Requires-Dist: numpy
+Requires-Dist: sortedcontainers
+Requires-Dist: dask[array]>=2022.2.0
+Requires-Dist: pytest ; extra == "test"
+Project-URL: Home, https://github.com/micro-manager/NDStorage
+Provides-Extra: test
+
+Here lives the Python `ndstorage` package, containing both the python implementations for reading/writing NDTiff, as well as the API that should be implemented by other NDStorage classes

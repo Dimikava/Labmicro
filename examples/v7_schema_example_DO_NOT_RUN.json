@@ -1,0 +1,45 @@
+{
+  "version": 7,
+  "name": "offline_schema_example",
+  "output_root": "/D:/MicroscopeData",
+  "regions": [
+    {
+      "home": "not_a_real_home",
+      "home_xyz_um": {
+        "x": 10.0,
+        "y": 20.0,
+        "z": 30.0
+      },
+      "axes": {
+        "x": {
+          "end_um": 15,
+          "step_um": 2
+        },
+        "y": {
+          "end_um": 25,
+          "step_um": 5
+        },
+        "z": {
+          "end_um": 32,
+          "step_um": 1
+        }
+      }
+    }
+  ],
+  "pattern": "serpentine",
+  "channels": [
+    {
+      "name": "default",
+      "exposure_ms": 15,
+      "actions": []
+    }
+  ],
+  "dwell_ms": 0.0,
+  "repeats": 1,
+  "time": {
+    "count": 1,
+    "interval_s": 0.0
+  },
+  "format": "npy",
+  "return_home": false
+}

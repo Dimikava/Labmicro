@@ -1,0 +1,4 @@
+Zeiss Headless Controller v7.0.0
+Home -> Step -> Endpoint sequential XYZ acquisition engine
+Built for existing working Micro-Manager 2.0 Java backend + PixeLINK
+No hardware test conducted by assistant; offline simulated tests only.

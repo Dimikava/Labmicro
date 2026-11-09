@@ -1,0 +1,53 @@
+=== Pycro-Manager diagnostic (read-only) ===
+Python executable: D:\Users\zeiss\Desktop\microGod\mm38\Scripts\python.exe
+Python version: 3.8.10 (tags/v3.8.10:3d8993a, May  3 2021, 11:48:03) [MSC v.1928 64 bit (AMD64)]
+Architecture: Windows / 64bit
+Working directory: D:\Users\zeiss\Desktop\microGod
+Micro-Manager directory exists: True (C:\Program Files\Micro-Manager-2.0)
+  MMCoreJ.jar: False
+  mmgr_dal_ZeissCAN29.dll: True
+  mmgr_dal_SerialManager.dll: True
+
+=== Installed Python packages ===
+pycromanager: 1.0.2
+mmpycorex: 0.3.16
+pyjavaz: 1.2.8
+pyzmq: 27.1.0
+numpy: 1.24.4
+dask: 2023.5.0
+ndtiff: NOT INSTALLED
+pymmcore: 11.1.1.71.2
+setuptools: 56.0.0
+pip: 21.1.1
+
+=== Dependency consistency (pip check) ===
+No broken requirements found.
+pip check exit code: 0
+
+=== Import test (NO hardware connection) ===
+pycromanager import: FAILED
+Traceback (most recent call last):
+  File "diagnose_pycro.py", line 69, in main
+    module = importlib.import_module("pycromanager")
+  File "D:\Users\zeiss\AppData\Local\Programs\Python\Python38\lib\importlib\__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "D:\Users\zeiss\Desktop\microGod\mm38\lib\site-packages\pycromanager\__init__.py", line 3, in <module>
+    from pycromanager.acquisition.java_backend_acquisitions import (JavaBackendAcquisition, MagellanAcquisition,
+  File "D:\Users\zeiss\Desktop\microGod\mm38\lib\site-packages\pycromanager\acquisition\java_backend_acquisitions.py", line 14, in <module>
+    from pycromanager.mm_java_classes import ZMQRemoteMMCoreJ, Magellan
+  File "D:\Users\zeiss\Desktop\microGod\mm38\lib\site-packages\pycromanager\mm_java_classes.py", line 5, in <module>
+    from mmpycorex.core import ZMQRemoteMMCoreJ # Don't delete this, its called by other code
+  File "D:\Users\zeiss\Desktop\microGod\mm38\lib\site-packages\mmpycorex\__init__.py", line 9, in <module>
+    from .core import Core
+  File "D:\Users\zeiss\Desktop\microGod\mm38\lib\site-packages\mmpycorex\core.py", line 4, in <module>
+    from .launcher import  _PYMMCORES
+  File "D:\Users\zeiss\Desktop\microGod\mm38\lib\site-packages\mmpycorex\launcher.py", line 87, in <module>
+    _JAVA_HEADLESS_SUBPROCESSES : dict[int, subprocess.Popen] = {}
+TypeError: 'type' object is not subscriptable
+

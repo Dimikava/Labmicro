@@ -1,0 +1,96 @@
+Metadata-Version: 2.2
+Name: pycromanager
+Version: 1.0.2
+Summary: Open source microscope control using python
+Home-page: https://github.com/micro-manager/pycro-manager
+Author: Henry Pinkard
+Author-email: henry.pinkard@gmail.com
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: dask[array]>=2022.2.0
+Requires-Dist: ndstorage>=0.1.6
+Requires-Dist: docstring-inheritance
+Requires-Dist: mmpycorex
+Requires-Dist: sortedcontainers
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: wget; extra == "dev"
+Requires-Dist: requests; extra == "dev"
+Requires-Dist: napari; extra == "dev"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+[![Documentation Status](https://readthedocs.org/projects/pycro-manager/badge/?version=latest)](https://pycro-manager.readthedocs.io/en/latest/?badge=latest)
+[![License](https://img.shields.io/pypi/l/pycromanager.svg)](https://github.com/micro-manager/pycromanager/raw/master/LICENSE)
+[![PyPI](https://img.shields.io/pypi/v/pycromanager.svg)](https://pypi.org/project/pycromanager)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/pycromanager.svg)](https://pypistats.org/packages/pycromanager)
+   
+   
+<img src="docs/source/pycromanager_banner.png" width="600">
+
+`pycromanager` is a Python library for customized microscope hardware control and integration with image processing. It works together with [Micro-manager](https://micro-manager.org/) and [Micro-magellan](https://micro-manager.org/wiki/MicroMagellan), or can be used as a standalone backend system for controlling microscope hardware.
+
+Check out to the [journal article](https://rdcu.be/cghwk) or the [documentation](https://pycro-manager.readthedocs.io/en/latest/) for an idea of the capabilities and how to get started.
+
+Have a cool example of something you've done with `pycromanager` or an idea for improvement? Reach out on the issues page.
+
+## Installing pycro-manager
+
+1) Download the lastest version of [micro-manager 2.0](https://micro-manager.org/wiki/Micro-Manager_Nightly_Builds)
+2) Install pycro-manager using `pip install pycromanager`
+3) Run Micro-Manager, select tools-options, and check the box that says Run server on port 4827 (you only need to do this once)
+
+To verify everything is working, run the following code: 
+
+```
+from pycromanager import Core
+
+core = Core()
+print(core)
+```
+which will give an output like:
+
+```
+<pycromanager.core.mmcorej_CMMCore object at 0x7fe32824a208>
+```
+
+### Troubleshooting 
+
+Upon creating the Bridge, you may see an error with something like:
+
+```
+UserWarning: Version mistmatch between Java ZMQ server and Python client.
+Java ZMQ server version: 2.4.0
+Python client expected version: 2.5.0
+```
+
+In this case case your Micro-manager version Pycro-manager versions are out of sync. Usually, this can be fixed by downloading the latest versions of both. Uprgade to the latest Pycro-manager with: 
+
+```
+pip install pycromanager --upgrade
+```
+
+
+## Contributing
+
+We welcome community contributions to improve Pycro-manager, including bug fixes, improvements to documentation, examples of different use cases, or internal improvements. Check out the [contributing guide](https://github.com/micro-manager/pycro-manager/blob/master/Contributing.md) to see more about the workflow. Areas where community contributions would be especially helpful can be found on the [Issues](https://github.com/micro-manager/pycro-manager/issues) page with a **Help wanted** label
+
+Information about how to setup a development environment for the Java parts of Pycro-manager can be found [here](https://github.com/micro-manager/pycro-manager/issues/123)
